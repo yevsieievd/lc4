@@ -1,7 +1,8 @@
 from flask import Flask
 from markupsafe import escape
+from flask import render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 
 @app.route("/")
@@ -28,3 +29,8 @@ def show_post(post_id):
 @app.route('/about')
 def about():
     return 'The about page'
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('home.html', name=name)
