@@ -9,7 +9,7 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 
-@app.route("/mushrooms/")
+@app.route("/mushrooms")
 def mushrooms():
     return "<p>This is mushrooms</p>"
 
@@ -24,3 +24,7 @@ def show_user_profile(usr):
 def show_post(post_id):
     # show the post with the given id, the id is an integer
     return f'Post {post_id}'
+
+@app.route('/about')
+def about():
+    return 'The about page'
