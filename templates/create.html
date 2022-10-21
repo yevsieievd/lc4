@@ -1,0 +1,8 @@
+    <form method="post">
+        <label for="title">Create a person</label>
+        <br>
+        <input type="text" name="username"
+               placeholder="Enter Name"
+               value="{{ request.form['username'] }}"></input>
+        <button type="submit">Submit</button>
+    </form>
